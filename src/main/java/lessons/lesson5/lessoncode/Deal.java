@@ -23,9 +23,9 @@ public class Deal {
 
         int n = suits.length * rank.length; // количество карт
 
-        // часть 2 - ввод с консоли
 
-        // часть 3 - инициализация колоды
+
+        // часть 2 - инициализация колоды
         String[] deck = new String[n];
         for (int i = 0; i < rank.length; i++) {
             for (int j = 0; j < suits.length; j++) {
@@ -35,7 +35,7 @@ public class Deal {
 
         System.out.println(Arrays.toString(deck));
 
-        // часть 4 - перетасовка колоды
+        // часть 3 - перетасовка колоды
         for (int i = 0; i < n; i++) {
             int r = i + (int) (Math.random() * (n-i)); // случайная карта в колоде
             String temp = deck[r];
@@ -45,7 +45,7 @@ public class Deal {
 
         System.out.println(Arrays.toString(deck));
 
-        // часть 5 - перетасованная колода выводится на экран
+        // часть 4 - перетасованная колода выводится на экран
         for (int i = 0; i < cardsPerPlayer ; i++)
             for (int j = 0; j < players; j++) {
                playersCard[j][i] = deck[i*cardsPerPlayer+j];
@@ -53,7 +53,17 @@ public class Deal {
             }
 
         System.out.println();
+        System.out.println();
+        System.out.println();
 
+        for (int i = 0; i < players; i++) {
+            System.out.println();
+            System.out.println("Player "+(i+1));
+            for (int j = 0; j < cardsPerPlayer; j++) {
+                System.out.print(playersCard[i][j]+  "  ");
+            }
         }
+
+    }
 
 }
