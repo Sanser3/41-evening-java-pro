@@ -1,4 +1,4 @@
-package lessons.lesson9;
+package lessons.lesson9.arrayCollections;
 
 public class Book {
     int id;
